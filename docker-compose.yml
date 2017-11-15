@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  vehimalyst-chrome:
+    image: selenium/standalone-chrome:3.6.0-copper
+    container_name: vehimalyst-chrome
+    ports:
+      - 4444:4444
+    networks:
+      - vehimalyst-net
+    volumes:
+      - /dev/shm:/dev/shm
+
+#  vehimalyst-app:
+#    image:
+#    container_name: vehimalyst-app
+#    networks:
+#      - vehimalyst-net
+
+networks:
+  vehimalyst-net:
